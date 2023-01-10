@@ -12,7 +12,6 @@
     <artifactId>order-dataaccess</artifactId>
 
     <properties>
-
     </properties>
 
     <dependencies>
