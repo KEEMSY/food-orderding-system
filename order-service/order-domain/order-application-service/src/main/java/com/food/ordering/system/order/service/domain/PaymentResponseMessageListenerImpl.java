@@ -11,7 +11,7 @@ import org.springframework.validation.annotation.Validated;
 @Service
 public class PaymentResponseMessageListenerImpl implements PaymentResponseMessageListener {
     @Override
-    public void paymentComplete(PaymentResponse paymentResponse) {
+    public void paymentCompleted(PaymentResponse paymentResponse) {
 
     }
 
