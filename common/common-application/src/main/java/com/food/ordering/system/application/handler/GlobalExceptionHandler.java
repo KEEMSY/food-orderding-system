@@ -1,6 +1,5 @@
-package com.food.ordering.system.order.service.application.exception.handler;
+package com.food.ordering.system.application.handler;
 
-import com.food.ordering.system.application.handler.ErrorDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -36,7 +35,7 @@ public class GlobalExceptionHandler {
     public ErrorDTO handlerException(ValidationException validationException) {
         ErrorDTO errorDTO;
         if (validationException instanceof ConstraintViolationException) {
-            String violations = extractViolationsFromeException((ConstraintViolationException) validationException);
+            String violations = extractViolationsFromException((ConstraintViolationException) validationException);
             log.error(violations, validationException);
             errorDTO = ErrorDTO.builder()
                     .code(HttpStatus.BAD_REQUEST.getReasonPhrase())
@@ -53,7 +52,7 @@ public class GlobalExceptionHandler {
         return errorDTO;
     }
 
-    private String extractViolationsFromeException(ConstraintViolationException validationException) {
+    private String extractViolationsFromException(ConstraintViolationException validationException) {
         return validationException.getConstraintViolations()
                 .stream()
                 .map(ConstraintViolation::getMessage)
