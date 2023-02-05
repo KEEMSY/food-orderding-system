@@ -1,10 +1,9 @@
-package domain;
+package com.food.ordering.system.payment.service.domain;
 
 import com.food.ordering.system.domain.valueobject.PaymentStatus;
 import com.food.ordering.system.outbox.OutboxStatus;
 import com.food.ordering.system.payment.service.dataaccess.outbox.entity.OrderOutboxEntity;
 import com.food.ordering.system.payment.service.dataaccess.outbox.repository.OrderOutboxJpaRepository;
-import com.food.ordering.system.payment.service.domain.PaymentServiceApplication;
 import com.food.ordering.system.payment.service.domain.dto.PaymentRequest;
 import com.food.ordering.system.payment.service.domain.ports.input.message.listener.PaymentRequestMessageListener;
 import lombok.extern.slf4j.Slf4j;
