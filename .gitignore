@@ -1,5 +1,4 @@
 .idea
-readme.md
 .DS_Store
 order-service/.DS_Store
 infrastructure/docker-compose/volumes/kafka/broker-1
